@@ -1,6 +1,5 @@
 import numpy as np
-from skimage.transform import resize
-from imageProcessing import ImageProcessing
+
 
 class ImageSimilarity:
     """
@@ -19,7 +18,7 @@ class ImageSimilarity:
         # Calculate the number of matching values
         match_count = 0
         for i in range(min_length):
-            if(pattern1[i] == pattern2[i]):
+            if pattern1[i] == pattern2[i]:
                 match_count += 1
 
         # Calculate the similarity as the ratio of matching values to the total number of values in the shortest pattern
@@ -51,7 +50,9 @@ class ImageSimilarity:
         return similarity
 
     @staticmethod
-    def combined_similarity(side_pattern1: tuple[list[int], list[float]], side_pattern2: tuple[list[int], list[float]], edge_weight: float = 0.7) -> float:
+    def combined_similarity(side_pattern1: tuple[list[int], list[float]],
+                            side_pattern2: tuple[list[int], list[float]],
+                            edge_weight: float = 0.7) -> float:
         """
         Combine edge similarity and color similarity into one uniform similarity.
         """
@@ -66,4 +67,3 @@ class ImageSimilarity:
         
         combined_similarity = edge_weight * edge_similarity + color_weight * color_similarity
         return combined_similarity
-

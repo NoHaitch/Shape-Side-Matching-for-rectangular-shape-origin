@@ -4,15 +4,21 @@ import os
 
 
 class ImageProcessing:  
+    """
+    Class to process images and extract their edge and color patterns.
+    """
 
     @staticmethod
     def extract_edges_pattern(image_path: str) -> tuple[Pattern, Pattern]:
         """
         Extract the pattern from each 4 sides of an image.
-        :return Edge Pattern, Color Pattern
+
+        :param image_path: Path to the image file.
+        :returns: Tuple containing the edge pattern and color pattern.
         """
+        # Open the image and convert it to RGB
         image = Image.open(image_path)
-        image = image.convert('RGB')  # Ensure image is in RGB format
+        image = image.convert('RGB')
 
         # Get the dimensions of the puzzle image
         width, height = image.size
@@ -93,12 +99,10 @@ class ImageProcessing:
                     top_pixels = [image.getpixel((x, min(y + i, height - 1))) for i in range(15)]
                     top_color[x] = average_color(top_pixels)
                     break
-        
+
         # Remove pattern where distance is above the limit
-        fluctuation_limit = 150
-        
         # Remove end of pattern
-        def remove_fluctuations(distance, color):
+        def remove_fluctuations(distance, color, fluctuation_limit=150):
             for i in range(len(distance) - 1):
                 if abs(distance[i] - distance[i + 1]) > fluctuation_limit:
                     return distance[:i], color[:i]
@@ -115,7 +119,8 @@ class ImageProcessing:
         top_pattern = ImageProcessing.flatten_pattern(top_distance)
         bottom_pattern = ImageProcessing.flatten_pattern(bottom_distance)
 
-        return Pattern(left_pattern, right_pattern, top_pattern, bottom_pattern), Pattern(left_color, right_color, top_color, bottom_color)
+        return (Pattern(left_pattern, right_pattern, top_pattern, bottom_pattern),
+                Pattern(left_color, right_color, top_color, bottom_color))
 
     @staticmethod
     def flatten_pattern(distance: list[int]) -> list[int]:
