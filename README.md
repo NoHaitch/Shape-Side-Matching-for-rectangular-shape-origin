@@ -30,6 +30,9 @@
   <br>
 </div>
 
+<div align="center">
+<img src="https://github.com/NoHaitch/Shape-Side-Matching-for-rectangular-shape-origin/blob/main/images/test1.png" height=500>
+</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -37,9 +40,9 @@
 ## About The Project
 
 In the making of my paper about Shape Side Matching, I need to implement a simple program that can test my methodology of solving Shape Side Matching using String Matching and Similarity.
+The paper itself is for the final task for course IF2211 Strategi Algoritma ITB 2023/2024.
 
 This program uses	Knuth Morris Pratt (KMP) Algorithm and Boyer Moore (BM) Algorithm for string matching. It also uses Levenshtein Distance for string similarity.
-
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
