@@ -1,13 +1,14 @@
 import os
 from patternProcessing import PatternProcessing
 
+
 class Dataset:
     """
     Process images for a whole folder
     """
 
     @staticmethod
-    def get_folder_ascii_pattern(folder_path: str) -> dict[str, dict[str, str]]:
+    def get_folder_ascii_pattern(folder_path: str, exclude_folder: str = None) -> dict[str, dict[str, str]]:
         """
         Extract ASCII patterns for all images in a folder.
         The patterns are extracted for each side of the image and stored in a nested dictionary.
@@ -20,6 +21,10 @@ class Dataset:
             # Only accept PNG images
             if filename.endswith(".png"):
                 image_path = os.path.join(folder_path, filename)
+
+                # Exclude the specified folder if provided
+                if exclude_folder and os.path.samefile(exclude_folder, image_path):
+                    continue
                 
                 # Extract the ASCII pattern from the image for each side
                 sides = ["left", "right", "top", "bottom"]

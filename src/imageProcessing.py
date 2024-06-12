@@ -26,10 +26,8 @@ class ImageProcessing:
 
         if side in ["left", "right"]:
             distances = [-1 for _ in range(height)]
-            max_distance_length = height
         else:
             distances = [-1 for _ in range(width)]
-            max_distance_length = width
 
         # Find the distance of the first pixel from the left side of the image
         if side == "left":

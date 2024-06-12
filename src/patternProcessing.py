@@ -1,12 +1,13 @@
 from imageProcessing import ImageProcessing
 
+
 class PatternProcessing:
     """
     Process image and array pattern to get Ascii String
     """
     
     @staticmethod
-    def get_image_ascii_pattern(image_path: str, side: str) -> str:
+    def get_image_ascii_pattern(image_path: str, side: str) -> str | None:
         """
         Get the ascii pattern from image\n
         if side == "left", the shape is on the right side of the image\n
@@ -44,7 +45,6 @@ class PatternProcessing:
         Check if there is a pattern where the distance is above the 8-bit ascii limit
         """
         return min(pattern_array) < 256
-    
 
     @staticmethod
     def get_sub_pattern(ascii_pattern: str) -> list[str]:

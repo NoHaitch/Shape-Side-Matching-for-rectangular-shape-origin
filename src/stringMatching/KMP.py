@@ -4,7 +4,7 @@ class KMP:
     """
 
     @staticmethod
-    def computeBorderFunction(pattern: str) -> list[int]:
+    def compute_border_function(pattern: str) -> list[int]:
         """
         Preprocess the pattern to compute the border array
         """
@@ -21,7 +21,7 @@ class KMP:
         return border
 
     @staticmethod
-    def KMPSearch(text: str, pattern: str) -> bool:
+    def kmp_search(text: str, pattern: str) -> bool:
         """
         Perform Knuth-Morris-Pratt algorithm to find occurrences of the pattern in the text
         """
@@ -30,7 +30,7 @@ class KMP:
 
         m = len(pattern)
         n = len(text)
-        border = KMP.computeBorderFunction(pattern)
+        border = KMP.compute_border_function(pattern)
 
         i = 0 
         j = 0 
