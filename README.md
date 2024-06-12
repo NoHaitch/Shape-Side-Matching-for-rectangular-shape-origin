@@ -4,19 +4,14 @@
 
 <br />
 <div align="center">
-  <h1 align="center">PROJECT NAME</h1>
+  <h1 align="center">Shape Side Matching for Rectangular Shape Origin</h1>
 
   <p align="center">
-    <h3> Application Name {optional}</h3>
-    <h4> DESCRIPTION</h4>
+    <h4> Shape Side Matching using string matching and similarity</h4>
     <br/>
-    <!-- IMAGE OR LOGO -->
-    <!-- <img src="" alt="Project Logo // Team Picture // etc">
-    <br/>
-    <br/> -->
-    <a href="https://github.com/NoHaitch/Jigsaw-Puzzle-Solver/issues">Report Bug</a>
+    <a href="https://github.com/NoHaitch/Shape-Side-Matching-for-rectangular-shape-origin">Report Bug</a>
     ·
-    <a href="https://github.com/NoHaitch/Jigsaw-Puzzle-Solver/issues">Request Feature</a>
+    <a href="https://github.com/NoHaitch/Shape-Side-Matching-for-rectangular-shape-origin">Request Feature</a>
 <br>
 <br>
 
@@ -36,58 +31,16 @@
 </div>
 
 
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-        <li><a href="#instruction">Instruction</a></li>
-        <li>
-        <details>
-          <summary><a href="#features">Features</a></summary>
-          <ol>
-            <li><a href="#1-feature-x">Features - 1</a></li>
-            <li><a href="#2-feature-y">Features - 2</a></li>
-            <li><a href="#3-feature-z">Features - 3</a></li>
-          <ol>
-        </details>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#special-thanks">Special Thanks</a></li>
-  </ol>
-</details>
-
-## External Links
-
-- [Link A](https://example.com)
-- [Link B](https://example.com)
-- [Link C](https://example.com)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-General Explanation about the project, Why you made this, What does it do exactly.  
+In the making of my paper about Shape Side Matching, I need to implement a simple program that can test my methodology of solving Shape Side Matching using String Matching and Similarity.
 
-<!-- OPTIONAL LINK OR REFERENCE -->
-<!-- <p align="center">
-You can explore more on this link ... 
-<br>
-<a href="https://example.com"> <Strong>THIS LINK</Strong>
-</a>
-</p> -->
+This program uses	Knuth Morris Pratt (KMP) Algorithm and Boyer Moore (BM) Algorithm for string matching. It also uses Levenshtein Distance for string similarity.
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,7 +56,18 @@ Project dependencies
   ```sh
   # in Linux
   sudo apt install python3
+
+  # for other platform
+  https://www.python.org/downloads/
   ```
+
+* Python Libraries
+  ```sh
+  pip install Pillow
+  pip install matplotlib
+  pip install numpy
+  ```
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -123,13 +87,9 @@ How to install and use this project
 <!-- INSTURCTION -->
 ## Instruction
 Instruction to run/build/etc the program  
-example: 
 
-`make build` : To build from source to binary into bin/main  
-`make all` : Run binary directly after building   
-`make clean` : Remove all build generated files  
-`make ADT.test` : Running test for ADT test file, for example ( `make time.test` )  
-`make test.all` : Running all test  
+`python main.py` : run the program  
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -137,24 +97,11 @@ example:
 <!-- FEATURES -->
 ## Features
 
-### 1. Feature X
-
-this feature does X
-
-### 2. Feature Y
-
-this feature does Y  
-sub-features:
-   1. function 1
-   2. function 2
-   3. function 3
-
-### 3. Feature Z
-
-this feature does Z
-- `A`: print A.  
-- `B`: print B.  
-- `C`: print C.
+### 1. Shape Matching using KMP algorithm
+### 2. Shape Matching using BM algorithm
+### 3. String similarity using LD algorithm
+### 4. A simple GUI to show the resulted search
+### 5. Shows time takken to find the best shape match
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -171,12 +118,7 @@ Pull Request is **permited and warmly welcomed**
 
 <!-- LICENSE -->
 ## Licensing
-
 The code in this project is licensed under Apache License 2.0.
-
-<!-- SPECIAL THANKS AND/OR CREDITS -->
-## Special Thanks
-- [Repository_Template](https://github.com/NoHaitch/Repository_Template/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -184,7 +126,6 @@ The code in this project is licensed under Apache License 2.0.
 <h3 align="center"> THANK YOU! </h3>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[issues-url]: https://github.com/NoHaitch/Jigsaw-Puzzle-Solver/issues
+[issues-url]: https://github.com/NoHaitch/Shape-Side-Matching-for-rectangular-shape-origin/issues
 [license-shield]: https://img.shields.io/badge/License-apache_license_2.0-red
-[license-url]: https://github.com/NoHaitch/Jigsaw-Puzzle-Solver/blob/main/LICENSE
+[license-url]: https://github.com/NoHaitch/Shape-Side-Matching-for-rectangular-shape-origin/blob/main/LICENSE
